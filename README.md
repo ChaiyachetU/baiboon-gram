@@ -11,4 +11,4 @@ Using React and Firebase for backend.
 
 ## Preview
 
-![preview-image](https://github.com/ChaiyachetU/baiboon-gram.git/preview-images/preveiw-img.png?raw=true)
+![preview-image](https://github.com/ChaiyachetU/baiboon-gram.git/preview-images/preview-img.png?raw=true)
