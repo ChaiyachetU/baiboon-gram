@@ -1,13 +1,221 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
+:root {
+  --primary: #efb6b2;
+  --secondary: #4e4e4e;
+  --error: #ff4a4a;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* base styles & title */
+body {
+  font-family: "Nunito", sans-serif;
+  color: var(--secondary);
+}
+.App {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* login form styles */
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.form {
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(92, 99, 105, 0.2);
+}
+.form h1 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 3rem;
+}
+.form-input {
+  display: flex;
+  flex-direction: column;
+}
+.form-input input {
+  font-family: inherit;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border-style: none none solid none;
+  border-bottom-color: var(--primary);
+  outline: none;
+}
+.form-input button {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--primary);
+  background-color: #f7f7f7;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  opacity: 0.8;
+}
+.form-input button:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.form-input .error {
+  margin: 0 0 20px 0;
+}
+
+/* header styles */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header h1 {
+  color: var(--primary);
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+.header .btn {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  color: var(--primary);
+  background-color: #f7f7f7;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 20px;
+  opacity: 0.8;
+}
+.header .btn:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+/* title styles */
+.title h2,
+.title p {
+  text-align: center;
+}
+.title h2 {
+  margin-top: 60px;
+  font-size: 2.6rem;
+}
+.title h2 span {
+  font-size: 3rem;
+}
+
+/* upload form styles */
+form {
+  margin: 30px auto 10px;
+  text-align: center;
+}
+label input {
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+  margin: 10px auto;
+  line-height: 30px;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 24px;
+}
+label:hover {
+  background: var(--primary);
+  color: white;
+}
+.output {
+  height: 60px;
+  font-size: 0.8rem;
+}
+.error {
+  color: var(--error);
+}
+
+/* progress bar styles */
+.progress-bar {
+  height: 5px;
+  background: var(--primary);
+  margin-top: 20px;
+}
+
+/* image grid styles */
+.img-grid {
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+}
+.img-wrap {
+  overflow: hidden;
+  height: 0;
+  padding: 50% 0;
+  /* padding controls height, will always be perfectly square regardless of width */
+  position: relative;
+  opacity: 0.8;
+}
+.img-wrap img {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 150%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* modal styles */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.backdrop img {
+  display: block;
+  max-width: 60%;
+  max-height: 80%;
+  margin: 60px auto;
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
+  border: 3px solid white;
+}
+
+/* footer styles */
+.footer {
+  text-align: center;
+  margin: 40px 0 30px 0;
+  padding: 20px 0;
+}
+.footer a {
+  text-decoration: none;
+}
+
+/* responsive */
+@media only screen and (max-width: 768px) {
+  .img-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .backdrop img {
+    max-width: 80%;
+    max-height: 100%;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .img-grid {
+    grid-template-columns: 1fr;
+  }
+  .backdrop img {
+    max-width: 90%;
+    max-height: 100%;
+  }
 }
