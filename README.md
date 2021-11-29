@@ -4,7 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Projects Details
 
-Using React and Firebase for backend.
+Inspiration from this [Tutorial](https://www.youtube.com/watch?v=vUe91uOx7R0).
+
+Using React for Frontend and Firebase for Backend.
 
 - Firebase Authentication for Login and Logout
 - Firebase Storage and Firebase Firestore for database.
